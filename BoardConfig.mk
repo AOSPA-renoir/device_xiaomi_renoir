@@ -21,6 +21,10 @@ TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/hidl/manifest.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_renoir
+TARGET_RECOVERY_DEVICE_MODULES := libinit_renoir
+
 # Kernel
 KERNEL_FRAGMENT_CONFIG := vendor/renoir_QGKI.config
 
