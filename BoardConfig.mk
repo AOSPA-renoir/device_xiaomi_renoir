@@ -25,13 +25,15 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/hidl/manifest.xml
 TARGET_KERNEL_CONFIG += vendor/renoir_QGKI.config
 
 # Kernel modules
-BOOT_KERNEL_MODULES := \
-    focaltech_touch.ko \
-    goodix_core.ko \
-    hwid.ko \
-    msm_drm.ko \
-    xiaomi_touch.ko
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+BOARD_VENDOR_KERNEL_MODULES += \
+    $(KERNEL_MODULES_OUT)/tfa98xx_dlkm.ko \
+    $(KERNEL_MODULES_OUT)/focaltech_touch.ko \
+    $(KERNEL_MODULES_OUT)/fpc1020_tee.ko \
+    $(KERNEL_MODULES_OUT)/goodix_core.ko \
+    $(KERNEL_MODULES_OUT)/goodix_ts_gesture.ko \
+    $(KERNEL_MODULES_OUT)/goodix_ts_tools.ko \
+    $(KERNEL_MODULES_OUT)/qcom-hv-haptics.ko \
+    $(KERNEL_MODULES_OUT)/xiaomi_touch.ko
 
 # Partitions
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
