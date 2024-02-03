@@ -22,7 +22,7 @@ TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/hidl/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/renoir_QGKI.config
+KERNEL_FRAGMENT_CONFIG := vendor/renoir_QGKI.config
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES += \
